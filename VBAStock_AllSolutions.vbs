@@ -151,27 +151,27 @@ Sub Hard_Solution(wkSheet As Worksheet)
 End Sub
 
 
-Sub Clear_Columns()
-        Dim ws As Worksheet        
-        For Each ws In Worksheets               'Loop through all the sheets
-                ws.Columns("J").Clear              'Clear the values in the columns J to R of the current sheet
-                ws.Columns("K").Clear
-                ws.Columns("L").Clear
-                ws.Columns("M").Clear
-                ws.Columns("P").Clear
-                ws.Columns("Q").Clear
-                ws.Columns("R").Clear
-        Next ws
-End Sub
+'Sub Clear_Columns()
+'        Dim ws As Worksheet        
+'        For Each ws In Worksheets               'Loop through all the sheets
+'                ws.Columns("J").Clear              'Clear the values in the columns J to R of the current sheet
+'                ws.Columns("K").Clear
+'                ws.Columns("L").Clear
+'                ws.Columns("M").Clear
+'                ws.Columns("P").Clear
+'                ws.Columns("Q").Clear
+'                ws.Columns("R").Clear
+'        Next ws
+'End Sub
 
 
 Sub Main()
         Dim ws As Worksheet
-        Clear_Columns
+'        Clear_Columns
         For Each ws In Worksheets
-                'Easy_Solution ws		'call the sub routine Easy_Solution
+'                Easy_Solution ws		'call the sub routine Easy_Solution
                 Moderate_Solution ws            'call the sub routine Moderate_Solution
-                Hard_Solution ws                   'call the sub routine Hard_Solution
+                Hard_Solution ws                'call the sub routine Hard_Solution
         Next ws
 End Sub
 
