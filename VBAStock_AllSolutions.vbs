@@ -38,11 +38,10 @@ Sub Easy_Solution(wkSheet As Worksheet)
                 
                 rownum = rownum + 1             'increment the current row number
                 is_firstrow = True                      'next row is the firstrow for the new ticker
-        End If
-        
-    Next irow
-    
+        End If        
+    Next irow    
 End Sub
+
 
 'Calculate and display the yearly change, precentage of change and total stock value for all the tickers
 Sub Moderate_Solution(wkSheet As Worksheet)
@@ -104,6 +103,7 @@ Sub Moderate_Solution(wkSheet As Worksheet)
         Next irow
 End Sub
 
+
 'Calculate and display the greatest increase, greatest decrease, and max stock volume
 Sub Hard_Solution(wkSheet As Worksheet)
         Dim max_perc, min_perc As Double
@@ -128,7 +128,7 @@ Sub Hard_Solution(wkSheet As Worksheet)
                 If wkSheet.Range("L" & irow).Value > max_perc Then              'check if the current percentage is greater than the max_perc
                         max_perc = wkSheet.Range("L" & irow).Value                 'assign max_perc as the current value
                         ticker1 = wkSheet.Range("J" & irow).Value                      'assign the corresponding ticker id to the ticker1 variable
-                'End If
+               'End If
                 ElseIf wkSheet.Range("L" & irow).Value < min_perc Then          'check if the current percentage is less than the min_perc
                         min_perc = wkSheet.Range("L" & irow).Value                   'assign min_perc value as the current value
                         ticker2 = wkSheet.Range("J" & irow).Value                       'assign the corresponding ticker id to the ticker2 variable
